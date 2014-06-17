@@ -11,11 +11,11 @@ Just clone repo into home dir:
 
 then source it:
 
-    source ~/.mybash/bashrc.home
+    source ~/.mybash/home.bashrc
 
 or alter home's defaults, create `.bashrc` if not exist.
 
-    cp ~/.mybash/bashrc.home ~/.bashrc
+    cp ~/.mybash/home.bashrc ~/.bashrc
 
 I didn't used dot prefix as already hidden by repo name.
 
