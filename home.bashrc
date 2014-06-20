@@ -3,10 +3,12 @@
  
 _MYBASHRCDIR=".mybash"
 
-if [ -f "${HOME}/${_MYBASHRCDIR}/bashrc" ]; then
-  source "${HOME}/${_MYBASHRCDIR}/bashrc"
-fi
-
-if [ -f "${HOME}/${_MYBASHRCDIR}/bash_functions" ]; then
-  source "${HOME}/${_MYBASHRCDIR}/bash_functions"
+# source all *.sh in .mybash dir
+if [ -d ${HOME}/$_MYBASHRCDIR ]; then
+  for i in ${HOME}/$_MYBASHRCDIR/*.sh; do
+    if [ -r $i ]; then
+      . $i
+    fi
+  done
+  unset i
 fi
